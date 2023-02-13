@@ -5,5 +5,14 @@ import java.util.List;
 
 public class LinkedListCreator {
     public LinkedList<Integer> createLinkedList(List<Integer> sourceList) {
+        LinkedList<Integer> integers = new LinkedList<>();
+        for (Integer i : sourceList) {
+            if (i % 2 == 0) {
+                integers.add(i);
+            } else {
+                integers.add(0, i);
+            }
+        }
+        return integers;
     }
 }
